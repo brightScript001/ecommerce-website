@@ -18,9 +18,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white shadow-md py-4 px-8 flex justify-between items-center">
+      <nav className="bg-white h-20 shadow-md py-4 px-8 flex justify-between items-center sm:h-16 md:h-16 ">
         {/* Left Side */}
-        <div className="text-2xl font-bold">Flone</div>
+        <div className="text-4xl font-bold sm:text-3xl ">Flone.</div>
 
         {/* Center Links */}
         <div className="hidden lg:flex flex-1 justify-center">
@@ -45,6 +45,10 @@ const Navbar = () => {
           <button className="text-xl hidden lg:block">
             <FaSearch />
           </button>
+          {/* User Icon - Hidden on Mobile and Tablet Views */}
+          <button className="text-xl hidden lg:block">
+            <FaUserCircle />
+          </button>
           <button className="relative">
             <FaBell className="text-xl" />
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
@@ -63,9 +67,7 @@ const Navbar = () => {
               2
             </span>
           </button>
-          <button className="text-xl">
-            <FaUserCircle />
-          </button>
+
           <button className="lg:hidden text-xl" onClick={toggleSidebar}>
             <FaBars />
           </button>
