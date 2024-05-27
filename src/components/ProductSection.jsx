@@ -83,9 +83,11 @@ const ProductSection = () => {
   });
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-center mb-8">DAILY DEALS!</h2>
-      <div className="flex justify-center mb-8">
+    <div className="container lg:ml-[100px] md:ml-[70px] py-16 lg:text-center">
+      <h2 className="text-3xl font-bold text-center mb-8 lg:ml-[300px] ">
+        DAILY DEALS!
+      </h2>
+      <div className="flex justify-center mb-8 lg:ml-[300px]">
         <ul className="flex space-x-8">
           <li
             className={`text-gray-600 hover:text-gray-900 cursor-pointer ${
@@ -113,22 +115,79 @@ const ProductSection = () => {
           </li>
         </ul>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 lg:gap-x-[280px] lg:gap-y-6">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="bg-white rounded-lg shadow-md p-6">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 className="text-xl font-bold mb-2 text-center">
-              {product.name}
-            </h3>
+          <div
+            key={product.id}
+            className="bg-white group relative w-full p-[20px] lg:w-[300px] lg:h-[550px]"
+          >
+            <div className="relative">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-[420px] object-cover rounded-lg mb-4"
+              />
+              <div className="flex justify-between items-center absolute bottom-0 left-0 w-full transition-all duration-300 opacity-0 group-hover:opacity-100">
+                <button
+                  className="flex-[0.2] text-center bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 border-r"
+                  onClick={() => console.log("Love button clicked")}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mx-auto"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  className="flex-1 text-center bg-purple-500 hover:bg-purple-800 text-white font-bold py-2"
+                  onClick={() => console.log("Buy Now button clicked")}
+                >
+                  Buy Now
+                </button>
+                <button
+                  className="flex-[0.2] text-center bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 border-l"
+                  onClick={() => console.log("View button clicked")}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mx-auto"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <h3 className="mb-2 text-center text-sm">{product.name}</h3>
             <div className="flex items-center mb-2 justify-center">
               {[...Array(5)].map((_, i) => (
                 <svg
                   key={i}
-                  className={`w-4 h-4 text-yellow-500 ${
+                  className={`w-5 h-5 text-yellow-500 ${
                     i < product.rating && "fill-current"
                   }`}
                   fill="none"
@@ -145,7 +204,7 @@ const ProductSection = () => {
                 </svg>
               ))}
             </div>
-            <p className="text-lg font-medium text-center">{product.price}</p>
+            <p className="text-sm text-center">{product.price}</p>
           </div>
         ))}
       </div>
