@@ -7,7 +7,7 @@ import DiscountImg from "../assets/discount.png";
 const Benefits = () => {
   return (
     <div className="p-8">
-      <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-8 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <BenefitItem
           icon={
             <img

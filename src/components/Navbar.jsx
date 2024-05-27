@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white h-20 shadow-md py-4 px-8 flex justify-between items-center sm:h-16 md:h-16 ">
+      <nav className="bg-white h-16 shadow-md py-4 px-8 flex justify-between items-center md:h-16 ">
         {/* Left Side */}
         <div className="text-4xl font-bold sm:text-3xl ">Flone.</div>
 
