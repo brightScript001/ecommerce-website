@@ -83,40 +83,40 @@ const ProductSection = () => {
   });
 
   return (
-    <div className="container lg:ml-[100px] md:ml-[70px] py-16 lg:text-center">
-      <h2 className="text-3xl font-bold text-center mb-8 lg:ml-[300px] ">
-        DAILY DEALS!
-      </h2>
-      <div className="flex justify-center mb-8 lg:ml-[300px]">
-        <ul className="flex space-x-8">
-          <li
-            className={`text-gray-600 hover:text-gray-900 cursor-pointer ${
-              selectedCategory === "New Arrivals" && "text-gray-900"
-            }`}
-            onClick={() => setSelectedCategory("New Arrivals")}
-          >
-            New Arrivals
-          </li>
-          <li
-            className={`text-gray-600 hover:text-gray-900 cursor-pointer ${
-              selectedCategory === "Best Sellers" && "text-gray-900"
-            }`}
-            onClick={() => setSelectedCategory("Best Sellers")}
-          >
-            Best Sellers
-          </li>
-          <li
-            className={`text-gray-600 hover:text-gray-900 cursor-pointer ${
-              selectedCategory === "Sale Items" && "text-gray-900"
-            }`}
-            onClick={() => setSelectedCategory("Sale Items")}
-          >
-            Sale Items
-          </li>
-        </ul>
+    <div className="">
+      <div className="container mx-auto px-4 py-16">
+        <h2 className="text-3xl font-medium text-center mb-8 ">DAILY DEALS!</h2>
+        <div className="flex justify-center mb-8 ">
+          <ul className="flex space-x-8">
+            <li
+              className={`text-gray-600 hover:text-gray-900 cursor-pointer ${
+                selectedCategory === "New Arrivals" && "text-gray-900"
+              }`}
+              onClick={() => setSelectedCategory("New Arrivals")}
+            >
+              New Arrivals
+            </li>
+            <li
+              className={`text-gray-600 hover:text-gray-900 cursor-pointer ${
+                selectedCategory === "Best Sellers" && "text-gray-900"
+              }`}
+              onClick={() => setSelectedCategory("Best Sellers")}
+            >
+              Best Sellers
+            </li>
+            <li
+              className={`text-gray-600 hover:text-gray-900 cursor-pointer ${
+                selectedCategory === "Sale Items" && "text-gray-900"
+              }`}
+              onClick={() => setSelectedCategory("Sale Items")}
+            >
+              Sale Items
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 lg:gap-x-[280px] lg:gap-y-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
         {filteredProducts.map((product) => (
           <div
             key={product.id}

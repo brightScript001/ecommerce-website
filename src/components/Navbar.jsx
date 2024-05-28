@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Center Links */}
         <div className="hidden lg:flex flex-1 justify-center">
-          <ul className="flex space-x-6 lowercase">
+          <ul className="flex space-x-6">
             {["Home", "Shop", "Collection", "Pages", "Blog", "Contact Us"].map(
               (item) => (
                 <li

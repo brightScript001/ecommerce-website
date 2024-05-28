@@ -36,7 +36,7 @@ const HomeBanner = () => {
   };
 
   return (
-    <div className="relative w-full lg:h-screen  bg-[#E6E0FF] p-5 flex flex-col lg:flex-row items-center justify-between">
+    <div className="relative w-full lg:h-screen bg-[#E6E0FF] p-5 flex flex-col sm:flex-row items-center justify-between">
       {/* Left Navigation Arrow */}
       <button
         onClick={handlePrevClick}
