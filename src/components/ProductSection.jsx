@@ -87,7 +87,8 @@ const ProductSection = () => {
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-medium text-center mb-8 ">DAILY DEALS!</h2>
         <div className="flex justify-center mb-8 ">
-          <ul className="flex space-x-8">
+      {/* make a component on it own */}
+          <ul className="flex space-x-8"> 
             <li
               className={`text-gray-600 hover:text-gray-900 cursor-pointer ${
                 selectedCategory === "New Arrivals" && "text-gray-900"

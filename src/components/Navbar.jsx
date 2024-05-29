@@ -31,9 +31,7 @@ const Navbar = () => {
                   key={item}
                   className="hover:text-gray-600 transition-colors"
                 >
-                  <a href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}>
-                    {item.toLowerCase()}
-                  </a>
+                  <a href={`#${item.replace(/\s+/g, "-")}`}>{item}</a>
                 </li>
               )
             )}
